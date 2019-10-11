@@ -25,7 +25,7 @@ print("Question 1(b) answer: " + answerBString)
 
 """(c)Why is a list better than a tuple to store your friend'sinformation in?"""
 #assign my answer to (c) to a string
-answerCString = "\nA list is mutable, wheras a tuple is immutable.\nThis means that we can change the contents of the list,\nbut we wouldn't be able to if it was stored as a tuple.\nMy birthdate will never change,\nso it is best stored in an immutable structure.\nMy best friend, however, may change.\nThus the need for a data structure that can be changed.\n"
+answerCString = "\nA list is mutable, whereas a tuple is immutable.\nThis means that we can change the contents of the list,\nbut we wouldn't be able to if it was stored as a tuple.\nMy birthdate will never change,\nso it is best stored in an immutable structure.\nMy best friend, however, may change.\nThus the need for a data structure that can be changed.\n"
 
 #print answer for (c) as a string
 print("Question 1(c) answer: " + answerCString)
@@ -61,9 +61,19 @@ userInputDataTypeCheck()
     
 
 """Question 3"""
+"""Create a dictionary which can be used to look up the translation of the names(in English)of the numbers 0-9 in Spanish, French,German, Dutch, and oneother language."""
 
+#create English to Spanish dictionary
+engToSpanish = {'zero':'cero', 'one': 'uno', 'two': 'dos', 'three': 'tres', 'four': 'cuatro', 'five': 'cinco', 'six': 'seis', 'seven': 'siete', 'eight': 'ocho', 'nine': 'nueve'}
+#create English to French dictionary
+engToFrench = {'zero':'zero', 'one': 'un', 'two': 'deux', 'three': 'trois', 'four': 'quatre', 'five': 'cinq', 'six': 'six', 'seven': 'sept', 'eight': 'huit', 'nine': 'neuf'}
+#create English to German dictionary
+engToGerman = {'zero':'null', 'one': 'eins', 'two': 'zwei', 'three': 'drei', 'four': 'vier', 'five': 'funf', 'six': 'sechs', 'seven': 'sieben', 'eight': 'acht', 'nine': 'neun'}
+#create English to Dutch dictionary
+engToDutch = {'zero':'nul', 'one': 'een', 'two': 'twee', 'three': 'drie', 'four': 'vier', 'five': 'vijf', 'six': 'zes', 'seven': 'zeven', 'eight': 'acht', 'nine': 'negen'}
+#create English to Norwegian dictionary
+engToFrench = {'zero':'null', 'one': 'en', 'two': 'to', 'three': 'tre', 'four': 'fire', 'five': 'fem', 'six': 'seks' 'seven': 'sju', 'eight': 'atte', 'nine': 'ni'}
 
+#create a single dictionary that includes all 5 languages
+languageDict = {'numbers':[0,1,2,3,4,5,6,7,8,9], 'english':['zero','one','two','three','four','five','six','seven','eight,','nine'],'spanish':['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve'],'french':['un','deux','trois','quatre','cinq','six','sept','huit','neuf'],'german':['null','eins','zwui','drei','vier','funf','six']}
 
-
-"""Hello World Test"""
-#print("Hello World")
