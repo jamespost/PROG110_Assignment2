@@ -42,7 +42,7 @@ def userInputDataTypeCheck():
     maxUserInputs = 5
     while userInputs < maxUserInputs:
         #prompt the user for input
-        print("Input an integer, a string (include quotation marks!), a float, a bool, or a complex number")
+        print("Input an integer, a string (include quotation marks), a float, a bool, or a complex number")
         #assign the users input to a variable
         userInput = input()
         #try to print the data type for userInput
@@ -70,11 +70,11 @@ languageDict = {'numbers':[0,1,2,3,4,5,6,7,8,9], 'english':['zero','one','two','
 
 #define function that prints the appropriate translation of a numeral 0-9 to a given language
 def translateNumeral():
-	print("Type in a numeral 0-9 and press enter")
-	numeralInt = int(input())
-	print("Type in a language (english, spanish, french, german, dutch, or norwegian)")
+	print("Type in a numeral 0-9 then press enter")
+	numeralInt = int(input())	
+	print("Type in a language, then press enter include quotation marks ('english', 'spanish', 'french', 'german', 'dutch', or 'norwegian')")
 	languageString = str(input())
-	print(str(numeralInt) + " is " + languageDict[languageString][numeralInt -1] + " in " + languageString)
+	print(str(numeralInt) + " is " + languageDict[languageString][numeralInt] + " in " + languageString)
 
 #execute translateNumeral
 translateNumeral()
