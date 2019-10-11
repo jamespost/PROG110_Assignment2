@@ -61,19 +61,20 @@ userInputDataTypeCheck()
     
 
 """Question 3"""
-"""Create a dictionary which can be used to look up the translation of the names(in English)of the numbers 0-9 in Spanish, French,German, Dutch, and oneother language."""
+"""Create a dictionary which can be used to look up the translation of the names(in English)of the numbers 0-9 in Spanish, French,German, Dutch, and one other language."""
+#define a single dictionary that includes all 5 languages
+languageDict = {'numbers':[0,1,2,3,4,5,6,7,8,9], 'english':['zero','one','two','three','four','five','six','seven','eight,','nine'],'spanish':['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve'],'french':['un','deux','trois','quatre','cinq','six','sept','huit','neuf'],'german':['null','eins','zwui','drei','vier','funf','six','sechs', 'sieben','acht','neun'],'dutch':['nul','een','twee','drie','vier','vijf','zes','zeven','acht', 'negen'],'norwegian':['null','en','to','tre','fire','fem','seks','sju','atte','ni']}
 
-#create English to Spanish dictionary
-engToSpanish = {'zero':'cero', 'one': 'uno', 'two': 'dos', 'three': 'tres', 'four': 'cuatro', 'five': 'cinco', 'six': 'seis', 'seven': 'siete', 'eight': 'ocho', 'nine': 'nueve'}
-#create English to French dictionary
-engToFrench = {'zero':'zero', 'one': 'un', 'two': 'deux', 'three': 'trois', 'four': 'quatre', 'five': 'cinq', 'six': 'six', 'seven': 'sept', 'eight': 'huit', 'nine': 'neuf'}
-#create English to German dictionary
-engToGerman = {'zero':'null', 'one': 'eins', 'two': 'zwei', 'three': 'drei', 'four': 'vier', 'five': 'funf', 'six': 'sechs', 'seven': 'sieben', 'eight': 'acht', 'nine': 'neun'}
-#create English to Dutch dictionary
-engToDutch = {'zero':'nul', 'one': 'een', 'two': 'twee', 'three': 'drie', 'four': 'vier', 'five': 'vijf', 'six': 'zes', 'seven': 'zeven', 'eight': 'acht', 'nine': 'negen'}
-#create English to Norwegian dictionary
-engToFrench = {'zero':'null', 'one': 'en', 'two': 'to', 'three': 'tre', 'four': 'fire', 'five': 'fem', 'six': 'seks' 'seven': 'sju', 'eight': 'atte', 'nine': 'ni'}
+#test functionality of languageDict
+#print(languageDict['spanish'][0])
 
-#create a single dictionary that includes all 5 languages
-languageDict = {'numbers':[0,1,2,3,4,5,6,7,8,9], 'english':['zero','one','two','three','four','five','six','seven','eight,','nine'],'spanish':['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve'],'french':['un','deux','trois','quatre','cinq','six','sept','huit','neuf'],'german':['null','eins','zwui','drei','vier','funf','six']}
+#define function that prints the appropriate translation of a numeral 0-9 to a given language
+def translateNumeral():
+	print("Type in a numeral 0-9 and press enter")
+	numeralInt = int(input())
+	print("Type in a language (english, spanish, french, german, dutch, or norwegian)")
+	languageString = str(input())
+	print(str(numeralInt) + " is " + languageDict[languageString][numeralInt -1] + " in " + languageString)
 
+#execute translateNumeral
+translateNumeral()
