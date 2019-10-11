@@ -1,5 +1,5 @@
 """README"""
-#This python script was run using Python version 3.7.3
+#This python script was tested using Python version 2.7
 
 """Question 1"""
 """(a)Write a python tuple of the year, month, and day of your birth"""
@@ -42,22 +42,16 @@ def userInputDataTypeCheck():
     maxUserInputs = 5
     while userInputs < maxUserInputs:
         #prompt the user for input
-        print("Input an integer, a string, a float, a bool, or a complex number")
+        print("Input an integer, a string (include quotation marks!), a float, a bool, or a complex number")
         #assign the users input to a variable
         userInput = input()
         #try to print the data type for userInput
-        try:
-            val = int(userInput)
-        except ValueError:
-            print("Thats not an int!")
-
-        #this doesn't work in Python 3
-        # if(type(userInput) != tuple):
-        #     #print out the data type for userInput
-        #     print(type(userInput))
-        # else:
-        #     #print an error
-        #     print("The data entered was a tuple, please enter a valid data type")
+        if(type(userInput) != tuple):
+             #print out the data type for userInput
+             print(type(userInput))
+        else:
+             #print an error
+             print("The data entered was a tuple, please enter a valid data type")
         
         #increment userInputs
         userInputs += 1
@@ -66,6 +60,7 @@ def userInputDataTypeCheck():
 userInputDataTypeCheck()
     
 
+"""Question 3"""
 
 
 
